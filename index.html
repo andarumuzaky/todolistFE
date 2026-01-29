@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="todo-header">
+            <h2>Todo List</h2>
+            <button onclick="logout()" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="todo-input" placeholder="Apa rencana hari ini?">
+            <button onclick="addTodo()" class="add-btn"><i class="fas fa-plus"></i></button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="setFilter('all')">Semua</button>
+            <button class="tab-btn" onclick="setFilter('active')">Aktif</button>
+            <button class="tab-btn" onclick="setFilter('completed')">Selesai</button>
+        </div>
+
+        <ul id="todo-list">
+            </ul>
+
+        <div class="footer-action">
+            <span id="counter">0 tugas tersisa</span>
+            <button onclick="clearCompleted()" class="clear-btn">Hapus yang Selesai</button>
+        </div>
+    </div>
+
+    <script src="js/todos.js"></script>
+</body>
+</html>

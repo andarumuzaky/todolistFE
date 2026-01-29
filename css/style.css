@@ -1,0 +1,97 @@
+:root {
+    --primary: #3b82f6;
+    --bg: #f3f4f6;
+    --text: #374151;
+    --danger: #ef4444;
+}
+
+* { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container utama (Kartu Putih) */
+.container {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Style Khusus Form Login */
+.auth-header { text-align: center; margin-bottom: 2rem; }
+.auth-header h2 { margin: 0; color: var(--text); }
+.auth-header p { color: #6b7280; font-size: 0.9rem; margin-top: 5px; }
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+}
+input:focus { border-color: var(--primary); }
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: #2563eb; }
+
+.toggle-text { text-align: center; margin-top: 15px; font-size: 0.9rem; }
+.toggle-text span { color: var(--primary); cursor: pointer; text-decoration: underline; }
+
+/* Style Khusus Todo List */
+.todo-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.logout-btn { background: none; color: var(--danger); width: auto; padding: 5px 10px; }
+
+.input-group { display: flex; gap: 10px; margin-bottom: 20px; }
+.add-btn { background: var(--primary); color: white; width: 50px; font-size: 1.2rem; }
+
+/* Tabs */
+.tabs { display: flex; gap: 10px; margin-bottom: 15px; }
+.tab-btn { background: #e5e7eb; color: var(--text); border-radius: 20px; font-size: 0.9rem; padding: 6px 12px; width: auto; }
+.tab-btn.active { background: var(--primary); color: white; }
+
+/* List */
+ul { list-style: none; padding: 0; margin: 0; }
+li {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px; border-bottom: 1px solid #f3f4f6;
+}
+li:hover { background: #f9fafb; }
+
+.todo-content { display: flex; align-items: center; gap: 12px; flex-grow: 1; }
+.checkbox {
+    width: 20px; height: 20px; border: 2px solid #d1d5db; border-radius: 50%;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.checkbox.checked { background: var(--primary); border-color: var(--primary); }
+.checkbox.checked::after { content: '✔'; color: white; font-size: 12px; }
+
+.task-text { font-size: 1rem; color: var(--text); }
+.task-text.completed { text-decoration: line-through; color: #9ca3af; }
+
+.actions i { cursor: pointer; margin-left: 10px; color: #9ca3af; }
+.actions .fa-pen:hover { color: var(--primary); }
+.actions .fa-trash:hover { color: var(--danger); }
+
+.footer-action { display: flex; justify-content: space-between; margin-top: 20px; font-size: 0.9rem; color: #6b7280; }
+.clear-btn { background: none; color: var(--danger); width: auto; padding: 0; }
+.clear-btn:hover { text-decoration: underline; }

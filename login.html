@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Todo App</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="auth-header">
+            <h2 id="form-title">Selamat Datang</h2>
+            <p>Silakan masuk untuk melanjutkan</p>
+        </div>
+
+        <form id="auth-form">
+            <input type="text" id="username" placeholder="Username" style="display: none;">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" class="btn-primary" id="submit-btn">Masuk</button>
+        </form>
+
+        <p class="toggle-text">
+            <span id="toggle-mode" onclick="switchMode()">Belum punya akun? Daftar</span>
+        </p>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
